@@ -1,9 +1,11 @@
 SODADAI (transferable ERC-20 token):
+
 This smart contract mints and automatically distributes SODADAI between lenders who have provided DAI ◈ to the credit pool smart contract in order to earn interest on SODA. Also it automatically burns SODADAI after the lender withdraws their DAI ◈ from the credit pool smart contract.
 
 Being a lender on SODA is similar to purchasing shares in a company, and your assets (SODADAO  tokens)  earn  you  weekly  interest depending  on  your  share  of  the  total  assets. SODA uses the pool model for aggregating cryptoassets in one place. There is no need to wait for matchmaking to happen between borrower and lender (P2P). This text focuses on the lending and gives guidance from the lender’s perspective.
 
 Lending Procedure:
+
 In order to earn interest the lender provides their cryptoassets to the credit pool smart contract. Compatible cryptoassets for lending on SODA can be found on the website https://www.soda.network or  in  the  source  code  of  the  lending  pool  smart  contract  on  GitHub:  https://github.com/sodacrypto. Еarly  SODA  versions will support DAI and USDC. 
 
 Lent liquidity is locked up for 60 days.
