@@ -15,7 +15,7 @@ contract SODADAODAI is Ownable, ERC20, ERC20Detailed("SODA DAO (DAI)","SODADAI",
     StructuredLinkedList.List holders;
     uint windowCloseTime = now + 1 days;
     
-    uint private MIN_LEND = 5000 * 10**18;
+    uint private MIN_LEND = 100 * 10**18;
     function getMinLend() public view returns (uint) { return MIN_LEND;  }
     function setMinLend(uint value) public onlyOwner { MIN_LEND = value; }
     
@@ -30,8 +30,9 @@ contract SODADAODAI is Ownable, ERC20, ERC20Detailed("SODA DAO (DAI)","SODADAI",
     }
     
     IERC20 DAI  = IERC20(address(0x0089d24a6b4ccb1b6faa2625fe562bdd9a23260359));
-    Pool pool   = new Pool(address(DAI));
+    Pool internal pool   = new Pool(address(DAI));
     function getPool() view public returns(address) {return address(pool);}
+    function getPoolBalance() view public returns (uint) {return DAI.balanceOf(address(pool));}
     
     function _transfer(address,address,uint256) internal {
         revert("token is not transferable");
