@@ -46,7 +46,7 @@ contract SODADAI is usingOraclize, SODADAODAI {
         _;
     }
     
-    IERC20 SODABTC = IERC20(address(0x00a666cF11E50C4ed944b8EcC30153E1E0eee7Dc31));
+    IERC20 SODABTC = IERC20(address(0x00669498dd7f02674b22eec994dcffc34dc8cbf32c));
     
     
     
